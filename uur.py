@@ -12,8 +12,8 @@ else:
 	quit()
 if ok == True:
 	user = input(" \nWanna reboot [y/n] ")
-	if user == "y" or user == "\n":
-		print("the device will be rebooted")
+	if user == "y" or user == "":
+		print("[+] the device will be rebooted")
 		os.system("reboot")
 	elif user == "n":
 		print("[-] the program will quit ")
