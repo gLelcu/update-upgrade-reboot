@@ -5,19 +5,19 @@ t =  time.time()
 ok = True
 os.system("apt update && apt upgrade")
 if time.time() - t > 1:
-	print("\n[+] updated and upgrated succesfully")
+	print("\n[+] updated and upgraded succesfully")
 else:
 	print("\n[-] error ( don't forget to run with \"sudo\" )") 
 	ok = False
 	quit()
 if ok == True:
 	user = input(" \nWanna reboot [y/n] ")
-	if user == "y":
+	if user == "y" or user == "\n":
 		print("the device will be rebooted")
 		os.system("reboot")
 	elif user == "n":
 		print("[-] the program will quit ")
 		quit()
 	else:
-		print("\n[+] invalid input")
+		print("\n[-] invalid input")
 		quit()
